@@ -1,0 +1,263 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur gaya dasar untuk halaman */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+/* Kontainer utama */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar header */
+.header-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.header-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Intro section */
+.intro {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: #4e73df;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Form input */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #4e73df;
+    transform: scale(1.05);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #4e73df;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #3e5bc2;
+    transform: scale(1.05);
+}
+
+.btn-submit i {
+    margin-right: 10px;
+}
+
+/* Pencarian */
+.data-list {
+    margin-top: 40px;
+}
+
+.data-list input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.data-list input:focus {
+    border-color: #4e73df;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+table th {
+    background-color: #4e73df;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: #fafafa;
+}
+
+table td button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ffc107;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+table td button:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+table td button i {
+    margin-right: 8px;
+}
+
+/* Efek Hover untuk baris tabel */
+table tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    transform: scale(1.02);
+}
+
+/* Animasi untuk row tabel saat data ditambahkan atau diperbarui */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+table tbody tr {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Media Queries untuk perangkat mobile dan tablet */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Mengurangi padding untuk perangkat kecil */
+    }
+
+    .intro h1 {
+        font-size: 1.8rem; /* Mengurangi ukuran font pada header */
+    }
+
+    .intro p {
+        font-size: 1rem; /* Mengurangi ukuran font pada deskripsi */
+    }
+
+    .input-group input, .btn-submit {
+        padding: 10px; /* Memperkecil padding agar sesuai dengan layar kecil */
+        font-size: 1rem; /* Mengurangi ukuran font input */
+    }
+
+    .data-list input {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    table th, table td {
+        padding: 10px; /* Mengurangi padding di tabel */
+    }
+
+    table td button {
+        padding: 10px 12px;
+    }
+
+    .header-image img {
+        height: 200px; /* Mengurangi tinggi gambar header pada mobile */
+    }
+}
+
+/* Media Queries untuk perangkat dengan lebar tablet dan laptop */
+@media (max-width: 1024px) {
+    .container {
+        padding: 25px; /* Menambah padding untuk tablet */
+    }
+
+    .intro h1 {
+        font-size: 2.2rem; /* Ukuran font header tetap besar di tablet */
+    }
+
+    .btn-submit {
+        font-size: 1.1rem;
+    }
+
+    table th, table td {
+        padding: 12px;
+    }
+
+    table td button {
+        padding: 10px 12px;
+    }
+}
